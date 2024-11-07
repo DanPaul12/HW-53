@@ -1,15 +1,16 @@
 import HomePage from './components/HomePage'
 import ErrorPage from './components/ErrorPage'
 import {Container} from 'react-bootstrap'
+import { Routes, Route } from 'react-router'
 import './App.css'
 
 function App() {
 
   return (
-    <Container>
-      <HomePage />
-      <ErrorPage />
-    </Container>
+    <Routes>
+      <Route path='/' element= {<HomePage/>}/>
+      <Route path='*' element= {<ErrorPage/>}/>
+    </Routes>
   )
 }
 
